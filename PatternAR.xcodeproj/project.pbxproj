@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		465D4D09333A600C01D3C0D7 /* Pods_PatternAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245D33D276A9B6235D6ADAD0 /* Pods_PatternAR.framework */; };
 		759A6C0924942F980027DC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759A6C0824942F980027DC28 /* AppDelegate.swift */; };
 		759A6C0B24942F980027DC28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759A6C0A24942F980027DC28 /* ViewController.swift */; };
-		759A6C0D24942F980027DC28 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 759A6C0C24942F980027DC28 /* Experience.rcproject */; };
 		759A6C1024942F980027DC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759A6C0E24942F980027DC28 /* Main.storyboard */; };
 		759A6C1224942F9B0027DC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759A6C1124942F9B0027DC28 /* Assets.xcassets */; };
 		759A6C1524942F9B0027DC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759A6C1324942F9B0027DC28 /* LaunchScreen.storyboard */; };
@@ -46,7 +45,6 @@
 		759A6C0524942F980027DC28 /* PatternAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759A6C0824942F980027DC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		759A6C0A24942F980027DC28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		759A6C0C24942F980027DC28 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		759A6C0F24942F980027DC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		759A6C1124942F9B0027DC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		759A6C1424942F9B0027DC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				38EF57DFD3E470DEE3CEBAC0 /* Pods-PatternARTests.debug.xcconfig */,
 				C1711ECA324BB439676B86A4 /* Pods-PatternARTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,7 +129,6 @@
 			children = (
 				759A6C0824942F980027DC28 /* AppDelegate.swift */,
 				759A6C0A24942F980027DC28 /* ViewController.swift */,
-				759A6C0C24942F980027DC28 /* Experience.rcproject */,
 				759A6C0E24942F980027DC28 /* Main.storyboard */,
 				759A6C1124942F9B0027DC28 /* Assets.xcassets */,
 				759A6C1324942F9B0027DC28 /* LaunchScreen.storyboard */,
@@ -410,7 +406,6 @@
 			files = (
 				759A6C0B24942F980027DC28 /* ViewController.swift in Sources */,
 				759A6C0924942F980027DC28 /* AppDelegate.swift in Sources */,
-				759A6C0D24942F980027DC28 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
