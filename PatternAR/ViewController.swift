@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         
         arView.scene.addAnchor(anchor)
         
-        
+        var cards: [Entity] = []
+        for _ in 1...4 {
+            let box = MeshResource.generateBox(width: 0.04, height: 0.002, depth: 0.04)
+        }
     }
 }
