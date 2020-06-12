@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.2, 0.2])
+        
+        arView.scene.addAnchor(anchor)
+        
         
     }
 }
