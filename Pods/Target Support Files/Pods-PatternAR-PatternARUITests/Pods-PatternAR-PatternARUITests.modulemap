@@ -1,0 +1,6 @@
+framework module Pods_PatternAR_PatternARUITests {
+  umbrella header "Pods-PatternAR-PatternARUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
