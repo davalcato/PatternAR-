@@ -47,7 +47,30 @@ class ViewController: UIViewController {
         // Ensures that the load request is not deallocated until we no longer need it
         var cancellable: AnyCancellable? = nil
         
-        ModelEntity.loadModelAsync(named: "toy_biplane")
+        cancellable = ModelEntity.loadModelAsync(named: "toy_biplane").append(ModelEntity.loadModelAsync(named: "toy_drummer"))
+        .collect()
+        .sink(receiveCompletion: {error in
+            print("Error: \(error)")
+            cancellable?.cancel()
+        }, receiveValue: { entities in
+            var objects: [ModelEntity] = []
+            // Scale down all entities here
+            for entity in entities {
+                entity.setScale(SIMD3<Float>(0.002, 0.002, 0.002), relativeTo: anchor)
+                entity.generateCollisionShapes(recursive: true)
+                // Here we clone each entity to create a pair of each models
+                for _ in 1...2 {
+                    objects.append(entity.clone(recursive: true))
+                    
+                }
+                
+            }
+            // Here we shuffle the objects
+            
+            
+            
+        })
+        
         
     }
     
