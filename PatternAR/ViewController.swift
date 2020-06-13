@@ -66,8 +66,11 @@ class ViewController: UIViewController {
                 
             }
             // Here we shuffle the objects
-            
-            
+            objects.shuffle()
+            // Here we place the objects on the cards
+            for (index, object) in objects.enumerated() {
+                cards[index].addChild(object)
+            }
             
         })
         
