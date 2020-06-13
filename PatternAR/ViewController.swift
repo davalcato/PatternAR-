@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         var cards: [Entity] = []
         for _ in 1...4 {
             let box = MeshResource.generateBox(width: 0.04, height: 0.002, depth: 0.04)
+            let metalMaterial = SimpleMaterial(color: .gray, isMetallic: true)
+            let model = ModelEntity(mesh: box, materials: [metalMaterial])
+            
+            // Create the ability to press on the model
+            model.generateCollisionShapes(recursive: true)
+            
+            // Cards array get append each time we iterate thru the loop
+            cards.append(model)
         }
     }
 }
