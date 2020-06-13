@@ -32,5 +32,17 @@ class ViewController: UIViewController {
             // Cards array get append each time we iterate thru the loop
             cards.append(model)
         }
+        
+        // Position the cards with a for loop to get a sequence of pairs
+        for (index, card) in cards.enumerated() {
+            // create an X cooridinance and using a Float as a dataType for the cards
+            let x = Float(index % 2)
+            let z = Float(index / 2)
+            
+            card.position = [x*0.1, 0, z*0.1]
+            anchor.addChild(card)
+            
+            
+        }
     }
 }
