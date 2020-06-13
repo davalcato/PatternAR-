@@ -70,6 +70,10 @@ class ViewController: UIViewController {
             // Here we place the objects on the cards
             for (index, object) in objects.enumerated() {
                 cards[index].addChild(object)
+                // Placing the models below the cards
+                cards[index].transform.rotation = simd_quatf(angle: .pi, axis: [1, 0, 0])
+                
+                
             }
             
         })
