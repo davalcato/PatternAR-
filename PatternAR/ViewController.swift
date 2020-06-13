@@ -8,6 +8,7 @@
 
 import UIKit
 import RealityKit
+import Combine
 
 class ViewController: UIViewController {
     
@@ -42,6 +43,12 @@ class ViewController: UIViewController {
             card.position = [x*0.1, 0, z*0.1]
             anchor.addChild(card)
         }
+        
+        // Ensures that the load request is not deallocated until we no longer need it
+        var cancellable: AnyCancellable? = nil
+        
+        ModelEntity.loadModelAsync(named: "toy_biplane")
+        
     }
     
     // Created an IBAction for the tap gesture
