@@ -44,6 +44,18 @@ class ViewController: UIViewController {
             anchor.addChild(card)
         }
         
+        // Create an occlusionbox here
+        let boxSize: Float = 0.7
+        let occlusionBoxMesh = MeshResource.generateBox(size: boxSize)
+        
+        // The occlusion material here
+        let occlusionBox = ModelEntity(mesh: occlusionBoxMesh, materials: [OcclusionMaterial()])
+        
+        // This is where we position the occlusionBox
+        occlusionBox.position.y = -boxSize/2
+        
+        anchor.addChild(occlusionBox)
+        
         // Ensures that the load request is not deallocated until we no longer need it
         var cancellable: AnyCancellable? = nil
         
@@ -72,9 +84,9 @@ class ViewController: UIViewController {
                 cards[index].addChild(object)
                 // Placing the models below the cards
                 cards[index].transform.rotation = simd_quatf(angle: .pi, axis: [1, 0, 0])
-                
-                
             }
+            // Cancelling the activate here
+            cancellable?.cancel()
             
         })
         
