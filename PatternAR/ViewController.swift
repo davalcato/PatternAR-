@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         arView.scene.addAnchor(anchor)
         
         var cards: [Entity] = []
-        for _ in 1...4 {
+        for _ in 1...16 {
             let box = MeshResource.generateBox(width: 0.04, height: 0.002, depth: 0.04)
             let metalMaterial = SimpleMaterial(color: .gray, isMetallic: true)
             let model = ModelEntity(mesh: box, materials: [metalMaterial])
@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         
         // Position the cards with a for loop to get a sequence of pairs
         for (index, card) in cards.enumerated() {
-            // create an X cooridinance and using a Float as a dataType for the cards
-            let x = Float(index % 2)
-            let z = Float(index / 2)
+            // create an X coordinance and using a Float as a dataType for the cards
+            let x = Float(index % 4)
+            let z = Float(index / 4)
             
             card.position = [x*0.1, 0, z*0.1]
             anchor.addChild(card)
@@ -59,7 +59,15 @@ class ViewController: UIViewController {
         // Ensures that the load request is not deallocated until we no longer need it
         var cancellable: AnyCancellable? = nil
         
-        cancellable = ModelEntity.loadModelAsync(named: "toy_biplane").append(ModelEntity.loadModelAsync(named: "toy_drummer"))
+        cancellable = ModelEntity.loadModelAsync(named: "01")
+            .append(ModelEntity.loadModelAsync(named: "02"))
+            .append(ModelEntity.loadModelAsync(named: "03"))
+            .append(ModelEntity.loadModelAsync(named: "04"))
+            .append(ModelEntity.loadModelAsync(named: "05"))
+            .append(ModelEntity.loadModelAsync(named: "06"))
+            .append(ModelEntity.loadModelAsync(named: "07"))
+            .append(ModelEntity.loadModelAsync(named: "08"))
+            
         .collect()
         .sink(receiveCompletion: {error in
             print("Error: \(error)")
